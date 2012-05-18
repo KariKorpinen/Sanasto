@@ -14,42 +14,39 @@ import java.io.InputStreamReader;
  * @author kkkorpin
  */
 public class Sanasto {
-
-    /**
-     * @param args the command line arguments
-     */
+/**
+  * @param args the command line arguments
+*/
    public static void main(String[] args) {
    // TODO code application logic here
       try{
-            FileInputStream fstream = new FileInputStream("../Musiciens.txt");
-            // Get the object of DataInputStream
-            DataInputStream in = new DataInputStream(fstream);
-            BufferedReader br = new BufferedReader(new InputStreamReader(in));
-            String strLine;
-            //Read File Line By Line
-            while ((strLine = br.readLine()) != null)   {
-            // Print the content on the console
-               System.out.println (strLine);
-            }
-            //Close the input stream
-            in.close();
-         }catch (Exception e){//Catch exception if any
+         FileInputStream fstream = new FileInputStream("../Musiciens.txt");
+         //luodaan streami sisäänluettavalle tiedostolle
+         DataInputStream in = new DataInputStream(fstream);
+         //luodaan objekti streamille 
+         BufferedReader br = new BufferedReader(new InputStreamReader(in));
+         //luodaan streamille puskuroitu lukija 
+         String strLine;
+         while ((strLine = br.readLine()) != null)   {
+            //luetaan tiedostoa rivi riviltä
+            System.out.println (strLine);
+            //tulostetaan luettu näkyviin konsoliin
+         }
+         in.close();
+         //suljetaan sisäänlukustreami
+      }catch (Exception e){//siepataan poikkeus ja yritetään tulostaa virheenaiheuttaja
          System.err.println("Error: " + e.getMessage());
       }   
-      try{
-            FileInputStream fstream2 = new FileInputStream("../Berlioz.txt");
-            
-            DataInputStream in2 = new DataInputStream(fstream2);
-            BufferedReader br2 = new BufferedReader(new InputStreamReader(in2));
-            String strLine2;
-            //Read File Line By Line
-            while ((strLine2 = br2.readLine()) != null)   {
-            // Print the content on the console
-               System.out.println (strLine2);
-            }
-            //Close the input stream
-            in2.close();
-         }catch (Exception e){//Catch exception if any
+      try{  //käsitellään toinen tiedosto
+         FileInputStream fstream2 = new FileInputStream("../Berlioz.txt");
+         DataInputStream in2 = new DataInputStream(fstream2);
+         BufferedReader br2 = new BufferedReader(new InputStreamReader(in2));
+         String strLine2;
+         while ((strLine2 = br2.readLine()) != null)   {
+            System.out.println (strLine2);
+         }
+         in2.close();
+      }catch (Exception e){//Catch exception if any
          System.err.println("Error: " + e.getMessage());
       }   
    } 
