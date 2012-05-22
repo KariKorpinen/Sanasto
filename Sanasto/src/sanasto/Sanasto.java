@@ -46,6 +46,7 @@ public class Sanasto {
             while ((strLine2 = br2.readLine()) != null)   {
             // Print the content on the console
                System.out.println (strLine2);
+               //strLine2.
             }
             //Close the input stream
             in2.close();
