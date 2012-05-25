@@ -41,7 +41,9 @@ public class SanastoTest {
     @Test
     public void testaaVoikoTiedostostaMuodostaaStream() {
        try{
+           String tiedosto="../Musiciens.txt";
           FileInputStream fstream = new FileInputStream("../Musiciens.txt");
+          assertEquals("../Musiciens.txt", tiedosto);
           //luodaan streami sisäänluettavalle tiedostolle
           System.out.println ("FileInputStream ok");
           fstream.close();
