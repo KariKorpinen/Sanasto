@@ -1,0 +1,18 @@
+﻿8.6.2012
+
+Toteutettuna haku yhdestä tiedostosta Trie:n solmujen kautta
+Käytössä olevat Trie javatiedostot ovat:
+Kansiossa duplikaatti tiedostot Node.java,Trie.java sekä TrieLoader.java
+käytössä.Sisäänluettava tiedostosto on kansiossa properties ja siellä tiedosto Musiciens2.txt
+
+Noista on tarkoitus poistaa viitteet hashmappeihin ja frameunitteihin sekä liittää ohjelman
+osa aikaisempaan koodiin nykyisen kahden erillisen ohjelman osan asemasta.
+
+Triessä haettava esimerkkisana on "rivi".
+
+Voiko käyttää tiedostossa Node.java olevia
+
+java.util.Collection; ja java.util.LinkedList: in toimintoja
+Collection<Node> child;
+child = new LinkedList<Node>();
+ 
